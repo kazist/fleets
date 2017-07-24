@@ -1,0 +1,48 @@
+Fleets\Vehicles\Drivers\Code\Tables\Drivers:
+  table: fleets_vehicles_drivers
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    driver_id:
+      name: driver_id
+      type: integer
+      length: 11
+      nullable: false
+    vehicle_id:
+      name: vehicle_id
+      type: integer
+      length: 11
+      nullable: false
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: true
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: true
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: true
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: true
+  indexes:
+    driver_id_index:
+      columns: [driver_id]
+    vehicle_id_index:
+      columns: [vehicle_id]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

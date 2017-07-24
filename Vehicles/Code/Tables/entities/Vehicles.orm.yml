@@ -1,0 +1,82 @@
+Fleets\Vehicles\Code\Tables\Vehicles:
+  table: fleets_vehicles
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    registration_no:
+      name: registration_no
+      type: string
+      length: 255
+      nullable: false
+    make_id:
+      name: make_id
+      type: integer
+      length: 11
+      nullable: false
+    model_id:
+      name: model_id
+      type: integer
+      length: 11
+      nullable: false
+    chassis_no:
+      name: chassis_no
+      type: string
+      length: 255
+      nullable: true
+    odometer:
+      name: odometer
+      type: integer
+      length: 11
+      nullable: true
+    purchase_date:
+      name: purchase_date
+      type: date
+      nullable: true
+    doors:
+      name: doors
+      type: integer
+      length: 11
+      nullable: true
+    seats:
+      name: seats
+      type: integer
+      length: 11
+      nullable: true
+    color:
+      name: color
+      type: string
+      length: 255
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: true
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: true
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: true
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: true
+  indexes:
+    make_id_index:
+      columns: [make_id]
+    model_id_index:
+      columns: [model_id]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

@@ -1,0 +1,42 @@
+{
+    "FleetsMakesModels": {
+        "namespace": "Fleets\\Makes\\Models",
+        "controller": "ModelsController"
+    },
+    "FleetsMakes": {
+        "namespace": "Fleets\\Makes",
+        "controller": "MakesController"
+    },
+    "FleetsVehicles": {
+        "namespace": "Fleets\\Vehicles",
+        "controller": "VehiclesController"
+    },
+    "FleetsVehiclesServices": {
+        "namespace": "Fleets\\Vehicles\\Services",
+        "controller": "ServicesController"
+    },
+    "FleetsVehiclesFueling": {
+        "namespace": "Fleets\\Vehicles\\Fueling",
+        "controller": "FuelingController"
+    },
+    "FleetsVehiclesOdometer": {
+        "namespace": "Fleets\\Vehicles\\Odometer",
+        "controller": "OdometerController"
+    },
+    "FleetsVehiclesContracts": {
+        "namespace": "Fleets\\Vehicles\\Contracts",
+        "controller": "ContractsController"
+    },
+    "FleetsVehiclesNotes": {
+        "namespace": "Fleets\\Vehicles\\Notes",
+        "controller": "NotesController"
+    },
+    "FleetsDrivers": {
+        "namespace": "Fleets\\Drivers",
+        "controller": "DriversController"
+    },
+    "FleetsVehiclesDrivers": {
+        "namespace": "Fleets\\Vehicles\\Drivers",
+        "controller": "DriversController"
+    }
+}

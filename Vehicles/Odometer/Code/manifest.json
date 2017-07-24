@@ -1,0 +1,13 @@
+{
+    "name": "odometer",
+    "title": "Vehicles Odometer",
+    "explanation": "  Vehicles Odometer",
+    "description": "  Vehicles Odometer",
+    "version": 4,
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "date_file_modified": "2017-07-24 13:04:03"
+}

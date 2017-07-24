@@ -1,0 +1,22 @@
+{
+    "title": "Fleets",
+    "description": "Fleets Sells",
+    "alias": "fleets",
+    "icon": "fa fa-car",
+    "home_link": "fleets\/fleets",
+    "path": "applications/Fleets",
+    "is_core": "1",
+    "menulist": [{
+            "title": "Makes",
+            "alias": "admin_fleets_makes",
+            "url": "admin/fleets/makes",
+            "icon": "fa fa-wrench",
+            "children": [{
+                    "title": "Model",
+                    "alias": "admin_fleets_makes_models",
+                    "url": "admin/fleets/makes/models",
+                    "icon": "fa fa-cog",
+                    "children": []
+                }]
+        }]
+}

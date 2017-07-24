@@ -1,0 +1,13 @@
+{
+    "name": "drivers",
+    "title": "Vehicles Drivers",
+    "explanation": "  Vehicles Drivers",
+    "description": "  Vehicles Drivers",
+    "version": 4,
+    "has_view": "0",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "date_file_modified": "2017-07-24 13:05:44"
+}

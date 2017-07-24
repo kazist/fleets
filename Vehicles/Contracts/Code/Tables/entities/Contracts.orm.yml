@@ -1,0 +1,58 @@
+Fleets\Vehicles\Contracts\Code\Tables\Contracts:
+  table: fleets_vehicles_contracts
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    title:
+      name: title
+      type: string
+      length: 255
+      nullable: false
+    vehicle_id:
+      name: vehicle_id
+      type: integer
+      length: 11
+      nullable: false
+    description:
+      name: description
+      type: text
+      nullable: true
+    start_date:
+      name: start_date
+      type: date
+      nullable: true
+    end_date:
+      name: end_date
+      type: datetime
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: true
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: true
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: true
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: true
+  indexes:
+    vehicle_id_index:
+      columns: [vehicle_id]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

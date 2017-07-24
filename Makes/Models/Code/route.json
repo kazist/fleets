@@ -1,0 +1,127 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Fleets\\Makes\\Models\\Code\\Controllers\\Admin\\ModelsController::taskAction",
+            "unique_name": "admin.fleets.makes.models.task",
+            "route": "admin/fleets/makes/models/task",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": "",
+            "keywords": "models, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Models List",
+            "description": "Management of Models.",
+            "controller": "Fleets\\Makes\\Models\\Code\\Controllers\\Admin\\ModelsController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.fleets.makes.models",
+            "route": "admin/fleets/makes/models",
+            "arguments": {},
+            "keywords": "model, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+
+        }, {
+            "title": "Add Models",
+            "description": "Add Models.",
+            "controller": "Fleets\\Makes\\Models\\Code\\Controllers\\Admin\\ModelsController::addAction",
+            "unique_name": "admin.fleets.makes.models.add",
+            "route": "admin/fleets/makes/models/add",
+            "permissions": "can_add",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "model, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Models {{ item.name }}",
+            "description": "Edit Models {{ item.name }}.",
+            "controller": "Fleets\\Makes\\Models\\Code\\Controllers\\Admin\\ModelsController::editAction",
+            "unique_name": "admin.fleets.makes.models.edit",
+            "route": "admin/fleets/makes/models/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "model, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Models Detail: {{ item.name }}",
+            "description": "Models Detail: {{ item.name }}",
+            "controller": "Fleets\\Makes\\Models\\Code\\Controllers\\Admin\\ModelsController::detailAction",
+            "unique_name": "admin.fleets.makes.models.detail",
+            "route": "admin/fleets/makes/models/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "model, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Models Delete: {{ item.name }}",
+            "description": "Models Delete: {{ item.name }}",
+            "controller": "Fleets\\Makes\\Models\\Code\\Controllers\\Admin\\ModelsController::deleteAction",
+            "unique_name": "admin.fleets.makes.models.delete",
+            "route": "admin/fleets/makes/models/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "model, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Models Save: {{ item.name }}",
+            "description": "Models Save: {{ item.name }}",
+            "controller": "Fleets\\Makes\\Models\\Code\\Controllers\\Admin\\ModelsController::saveAction",
+            "unique_name": "admin.fleets.makes.models.save",
+            "route": "admin/fleets/makes/models/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "model, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+
+        }]
+} 	
