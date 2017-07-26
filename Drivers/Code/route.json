@@ -1,0 +1,125 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Fleets\\Drivers\\Code\\Controllers\\Admin\\DriversController::taskAction",
+            "unique_name": "admin.fleets.drivers.task",
+            "route": "admin/fleets/drivers/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "drivers, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Driver List",
+            "description": "Management of Drivers.",
+            "controller": "Fleets\\Drivers\\Code\\Controllers\\Admin\\DriversController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.fleets.drivers",
+            "route": "admin/fleets/drivers",
+            "arguments": "",
+            "keywords": "driver, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Driver  ",
+            "description": "Add Driver .",
+            "controller": "Fleets\\Drivers\\Code\\Controllers\\Admin\\DriversController::addAction",
+            "unique_name": "admin.fleets.drivers.add",
+            "route": "admin/fleets/drivers/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "driver, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Driver {{ item.name }}",
+            "description": "Edit Driver {{ item.name }}.",
+            "controller": "Fleets\\Drivers\\Code\\Controllers\\Admin\\DriversController::editAction",
+            "unique_name": "admin.fleets.drivers.edit",
+            "route": "admin/fleets/drivers/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "driver, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Driver Detail: {{ item.name }}",
+            "description": "Driver Detail: {{ item.name }}",
+            "controller": "Fleets\\Drivers\\Code\\Controllers\\Admin\\DriversController::detailAction",
+            "unique_name": "admin.fleets.drivers.detail",
+            "route": "admin/fleets/drivers/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "driver, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Driver Delete: {{ item.name }}",
+            "description": "Driver Delete: {{ item.name }}",
+            "controller": "Fleets\\Drivers\\Code\\Controllers\\Admin\\DriversController::deleteAction",
+            "unique_name": "admin.fleets.drivers.delete",
+            "route": "admin/fleets/drivers/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "driver, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Driver Save: {{ item.name }}",
+            "description": "Driver Save: {{ item.name }}",
+            "controller": "Fleets\\Drivers\\Code\\Controllers\\Admin\\DriversController::saveAction",
+            "unique_name": "admin.fleets.drivers.save",
+            "route": "admin/fleets/drivers/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "driver, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

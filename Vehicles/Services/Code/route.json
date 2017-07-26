@@ -1,0 +1,125 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Fleets\\Vehicles\\Services\\Code\\Controllers\\Admin\\ServicesController::taskAction",
+            "unique_name": "admin.fleets.vehicles.services.task",
+            "route": "admin/fleets/vehicles/services/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "services, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Service List",
+            "description": "Management of Services.",
+            "controller": "Fleets\\Vehicles\\Services\\Code\\Controllers\\Admin\\ServicesController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.fleets.vehicles.services",
+            "route": "admin/fleets/vehicles/services",
+            "arguments": "",
+            "keywords": "service, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Service  ",
+            "description": "Add Service .",
+            "controller": "Fleets\\Vehicles\\Services\\Code\\Controllers\\Admin\\ServicesController::addAction",
+            "unique_name": "admin.fleets.vehicles.services.add",
+            "route": "admin/fleets/vehicles/services/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "service, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Service {{ item.name }}",
+            "description": "Edit Service {{ item.name }}.",
+            "controller": "Fleets\\Vehicles\\Services\\Code\\Controllers\\Admin\\ServicesController::editAction",
+            "unique_name": "admin.fleets.vehicles.services.edit",
+            "route": "admin/fleets/vehicles/services/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "service, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Service Detail: {{ item.name }}",
+            "description": "Service Detail: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Services\\Code\\Controllers\\Admin\\ServicesController::detailAction",
+            "unique_name": "admin.fleets.vehicles.services.detail",
+            "route": "admin/fleets/vehicles/services/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "service, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Service Delete: {{ item.name }}",
+            "description": "Service Delete: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Services\\Code\\Controllers\\Admin\\ServicesController::deleteAction",
+            "unique_name": "admin.fleets.vehicles.services.delete",
+            "route": "admin/fleets/vehicles/services/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "service, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Service Save: {{ item.name }}",
+            "description": "Service Save: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Services\\Code\\Controllers\\Admin\\ServicesController::saveAction",
+            "unique_name": "admin.fleets.vehicles.services.save",
+            "route": "admin/fleets/vehicles/services/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "service, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

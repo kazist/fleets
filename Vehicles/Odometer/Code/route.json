@@ -1,0 +1,125 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Fleets\\Vehicles\\Odometer\\Code\\Controllers\\Admin\\OdometerController::taskAction",
+            "unique_name": "admin.fleets.vehicles.odometer.task",
+            "route": "admin/fleets/vehicles/odometer/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "odometer, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Odometer List",
+            "description": "Management of Odometer.",
+            "controller": "Fleets\\Vehicles\\Odometer\\Code\\Controllers\\Admin\\OdometerController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.fleets.vehicles.odometer",
+            "route": "admin/fleets/vehicles/odometer",
+            "arguments": "",
+            "keywords": "customer, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Odometer  ",
+            "description": "Add Odometer .",
+            "controller": "Fleets\\Vehicles\\Odometer\\Code\\Controllers\\Admin\\OdometerController::addAction",
+            "unique_name": "admin.fleets.vehicles.odometer.add",
+            "route": "admin/fleets/vehicles/odometer/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "customer, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Odometer {{ item.name }}",
+            "description": "Edit Odometer {{ item.name }}.",
+            "controller": "Fleets\\Vehicles\\Odometer\\Code\\Controllers\\Admin\\OdometerController::editAction",
+            "unique_name": "admin.fleets.vehicles.odometer.edit",
+            "route": "admin/fleets/vehicles/odometer/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "customer, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Odometer Detail: {{ item.name }}",
+            "description": "Odometer Detail: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Odometer\\Code\\Controllers\\Admin\\OdometerController::detailAction",
+            "unique_name": "admin.fleets.vehicles.odometer.detail",
+            "route": "admin/fleets/vehicles/odometer/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "customer, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Odometer Delete: {{ item.name }}",
+            "description": "Odometer Delete: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Odometer\\Code\\Controllers\\Admin\\OdometerController::deleteAction",
+            "unique_name": "admin.fleets.vehicles.odometer.delete",
+            "route": "admin/fleets/vehicles/odometer/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "customer, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Odometer Save: {{ item.name }}",
+            "description": "Odometer Save: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Odometer\\Code\\Controllers\\Admin\\OdometerController::saveAction",
+            "unique_name": "admin.fleets.vehicles.odometer.save",
+            "route": "admin/fleets/vehicles/odometer/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "customer, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

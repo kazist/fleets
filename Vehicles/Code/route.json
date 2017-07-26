@@ -1,0 +1,125 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Fleets\\Vehicles\\Code\\Controllers\\Admin\\VehiclesController::taskAction",
+            "unique_name": "admin.fleets.vehicles.task",
+            "route": "admin/fleets/vehicles/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "vehicles, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Vehicle List",
+            "description": "Management of Vehicles.",
+            "controller": "Fleets\\Vehicles\\Code\\Controllers\\Admin\\VehiclesController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.fleets.vehicles",
+            "route": "admin/fleets/vehicles",
+            "arguments": "",
+            "keywords": "vehicle, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Vehicle  ",
+            "description": "Add Vehicle .",
+            "controller": "Fleets\\Vehicles\\Code\\Controllers\\Admin\\VehiclesController::addAction",
+            "unique_name": "admin.fleets.vehicles.add",
+            "route": "admin/fleets/vehicles/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "vehicle, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Vehicle {{ item.name }}",
+            "description": "Edit Vehicle {{ item.name }}.",
+            "controller": "Fleets\\Vehicles\\Code\\Controllers\\Admin\\VehiclesController::editAction",
+            "unique_name": "admin.fleets.vehicles.edit",
+            "route": "admin/fleets/vehicles/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "vehicle, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Vehicle Detail: {{ item.name }}",
+            "description": "Vehicle Detail: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Code\\Controllers\\Admin\\VehiclesController::detailAction",
+            "unique_name": "admin.fleets.vehicles.detail",
+            "route": "admin/fleets/vehicles/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "vehicle, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Vehicle Delete: {{ item.name }}",
+            "description": "Vehicle Delete: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Code\\Controllers\\Admin\\VehiclesController::deleteAction",
+            "unique_name": "admin.fleets.vehicles.delete",
+            "route": "admin/fleets/vehicles/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "vehicle, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Vehicle Save: {{ item.name }}",
+            "description": "Vehicle Save: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Code\\Controllers\\Admin\\VehiclesController::saveAction",
+            "unique_name": "admin.fleets.vehicles.save",
+            "route": "admin/fleets/vehicles/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "vehicle, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

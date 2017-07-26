@@ -1,0 +1,125 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Fleets\\Vehicles\\Fueling\\Code\\Controllers\\Admin\\FuelingController::taskAction",
+            "unique_name": "admin.fleets.vehicles.fueling.task",
+            "route": "admin/fleets/vehicles/fueling/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "fueling, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Fueling List",
+            "description": "Management of Fueling.",
+            "controller": "Fleets\\Vehicles\\Fueling\\Code\\Controllers\\Admin\\FuelingController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.fleets.vehicles.fueling",
+            "route": "admin/fleets/vehicles/fueling",
+            "arguments": "",
+            "keywords": "fueling, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Fueling  ",
+            "description": "Add Fueling .",
+            "controller": "Fleets\\Vehicles\\Fueling\\Code\\Controllers\\Admin\\FuelingController::addAction",
+            "unique_name": "admin.fleets.vehicles.fueling.add",
+            "route": "admin/fleets/vehicles/fueling/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "fueling, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Fueling {{ item.name }}",
+            "description": "Edit Fueling {{ item.name }}.",
+            "controller": "Fleets\\Vehicles\\Fueling\\Code\\Controllers\\Admin\\FuelingController::editAction",
+            "unique_name": "admin.fleets.vehicles.fueling.edit",
+            "route": "admin/fleets/vehicles/fueling/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "fueling, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Fueling Detail: {{ item.name }}",
+            "description": "Fueling Detail: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Fueling\\Code\\Controllers\\Admin\\FuelingController::detailAction",
+            "unique_name": "admin.fleets.vehicles.fueling.detail",
+            "route": "admin/fleets/vehicles/fueling/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "fueling, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Fueling Delete: {{ item.name }}",
+            "description": "Fueling Delete: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Fueling\\Code\\Controllers\\Admin\\FuelingController::deleteAction",
+            "unique_name": "admin.fleets.vehicles.fueling.delete",
+            "route": "admin/fleets/vehicles/fueling/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "fueling, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Fueling Save: {{ item.name }}",
+            "description": "Fueling Save: {{ item.name }}",
+            "controller": "Fleets\\Vehicles\\Fueling\\Code\\Controllers\\Admin\\FuelingController::saveAction",
+            "unique_name": "admin.fleets.vehicles.fueling.save",
+            "route": "admin/fleets/vehicles/fueling/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "fueling, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	
